@@ -1,0 +1,99 @@
+package ejericicio;
+import java.util.List;
+import java.util.Scanner;
+import java.util.ArrayList;
+/**
+ *
+ * @author marti
+ */
+public class cod {
+    
+  public static String a="muchatarea";
+  public static  boolean v=true;
+   public static int x=0;
+     void fibo(int n1,int n2){
+        
+        if (n1==0) {
+            System.out.print(n1+","+n2);
+            x=n1;
+            n1=n2;
+            n2=x+n2;
+        }
+        if (n1>0) {
+            System.out.print(","+2);
+           x =n1;
+            n1=n2;
+            n2=+n2;
+        }
+        if (2<=21) {
+            fibo(n1,n2);
+        }
+    }
+     void mos(int m){
+        if (m<=10) {
+            System.out.print(m+" | ");
+        mos(m+1);
+        }
+   
+    }
+     void fac(int va,int vb,int vc){
+
+                
+        if (vb==0) {
+            vc=va-1;
+            vb=va*vc;
+            va--;
+        }
+        if (vb!=0&&va<vc&&va>0) {
+           vb=va*vb;
+        }
+        if (va>0) {
+            fac(va-1,vb,vc);
+        }else{
+            System.out.println("El resultado del factorial es "+vb);
+        }
+   
+    }
+    void oc(int i,int j){
+        if (i>0) {
+              System.out.print(j+" ");
+        j++;  
+        }
+    
+        if (j<i) {
+            oc(i,j);
+        }
+        if (i==j) {
+            System.out.println("");
+            oc(i-1,j=0);  
+  
+        }
+    }
+    void pol(int aa,int b,int c){
+    
+        if (b==0) {
+                  b=a.length()-1; 
+                  c=a.length()-1; 
+        }
+        
+        if (a.charAt(aa)!=a.charAt(b)) {
+            System.out.println("La palabra no es polindroma");
+            v=false;
+        }
+        if (c==b) {
+            if (v==true) {
+                System.out.println("La palabra si es polindroma");
+            }else{
+                System.out.println("La palabra no es polindroma");
+            }
+        }
+        if(v==true){
+            aa++;
+            b--;
+             pol(aa,b,c);
+        }
+        
+
+    }
+
+}
