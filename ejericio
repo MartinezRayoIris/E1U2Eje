@@ -1,0 +1,64 @@
+package ejericicio;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author marti
+ */
+public class Ejericicio extends cod {
+
+   Scanner leer=new Scanner(System.in);
+         int num;
+         cod f=new cod();
+      //
+      //
+         public void menu(){
+         System.out.println("Que deseas hacer?");
+         System.out.println("1.-La serie Fibonacci (21)");
+         System.out.println("2.-Numeros del 1 al 10");
+         System.out.println("3.-Factorial de un numero");
+         System.out.println("4.-Numeros del 0 al 10 en descendecia hasta el 0");
+         System.out.println("5.-Polindromo");
+         System.out.println("6.-Salir");
+         num=leer.nextInt();
+         //
+          switch (num) {
+            case 1:
+                f.fibo(0, 1);
+             
+       
+            break;
+            //
+            case 2:
+               f.mos(1);     
+            break;
+            //
+            case 3:
+               f.fac(12,0,0); 
+       
+            break;
+            //
+            case 4:
+               f.oc(11,0);     
+            break;
+            //
+            case 5:
+               f.pol(0,0,0);     
+            break;
+            //
+            case 6:
+                System.exit(0);
+            break;
+            //
+            default:
+                    System.out.println("Esa opcion no existe");
+           break;
+          }
+         }
+    public static void main(String[] args) {
+        Ejericicio nu =new Ejericicio();
+        nu.menu();
+    }
+    
+}
